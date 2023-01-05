@@ -6,20 +6,25 @@ $cd-txt--invalid: #fff;
 $cd-danger: #b20a37;
 $ball-size: 5rem;
 $cd-secondary: skyblue;
-
+$cd-btn-start: rgba(1, 28, 55, 0);
+$cd-btn-end: rgba(1, 28, 55, 1);
 
 .btn {
-    background: $cd-btn;
+    background: $cd-btn-start;
     color: $cd-txt;
+    border: $cd-btn solid 5px;
     text-align: center;
     font-size: 3rem;
     cursor: pointer;
     padding: 1.85rem 3rem;
     border-radius: 10rem;
     transform: scale(1);
-    transition: 0.3s;
-    &:hover + .ball{
+    transition: transform 0.45s ease-in-out, background-color 0.3s 0.15s;
+  
+    
+    &:hover {   /* + .ball (pour ajouter leffect adjacent sur la ball ) */
         transform: scale(1.15);
+        background-color: $cd-btn-end;
     }
 }
 
@@ -36,6 +41,7 @@ $cd-secondary: skyblue;
 
 .container {
   background-color: rgb(237, 246, 247);
+  margin: 50px;
 }
 
 .form {
@@ -60,4 +66,39 @@ $cd-secondary: skyblue;
      }
       }
   }
+}
+
+
+.test{
+    height: 10px;
+    width: 50px;
+    background: #15DEA5;
+    margin-top: 20px;
+    transition: all 0.4s;
+    transform: scale(1) ease-in-out;
+    margin-bottom: 50px;
+}
+
+.testt{
+    margin-top: 20px;
+    height: 35px;
+    width: 100px;
+    background: #b20a37;
+    cursor: pointer;
+
+    &:active + .test {
+        transform: scale(2,0.5)  translate(150px, 20px) rotate(1turn);
+    }
+}
+
+.bt{
+    height: 35px;
+    width: 100px;
+    background: #b20a37;
+    cursor: pointer;
+}
+.progress {
+    &__bar {
+    transform: scaleX(0);
+    }
 }

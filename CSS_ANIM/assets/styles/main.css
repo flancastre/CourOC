@@ -1,16 +1,18 @@
 .btn {
-  background: #011c37;
+  background: rgba(1, 28, 55, 0);
   color: #15DEA5;
+  border: #011c37 solid 5px;
   text-align: center;
   font-size: 3rem;
   cursor: pointer;
   padding: 1.85rem 3rem;
   border-radius: 10rem;
   transform: scale(1);
-  transition: 0.3s;
+  transition: transform 0.45s ease-in-out, background-color 0.3s 0.15s;
 }
-.btn:hover + .ball {
+.btn:hover { /* + .ball (pour ajouter leffect adjacent sur la ball ) */
   transform: scale(1.15);
+  background-color: rgb(1, 28, 55);
 }
 
 .ball {
@@ -25,6 +27,7 @@
 
 .container {
   background-color: rgb(237, 246, 247);
+  margin: 50px;
 }
 
 .form__group input {
@@ -45,4 +48,36 @@
   background: #b20a37;
   border: 2px solid #b20a37;
   color: #fff;
+}
+
+.test {
+  height: 10px;
+  width: 50px;
+  background: #15DEA5;
+  margin-top: 20px;
+  transition: all 0.4s;
+  transform: scale(1) ease-in-out;
+  margin-bottom: 50px;
+}
+
+.testt {
+  margin-top: 20px;
+  height: 35px;
+  width: 100px;
+  background: #b20a37;
+  cursor: pointer;
+}
+.testt:active + .test {
+  transform: scale(2, 0.5) translate(150px, 20px) rotate(1turn);
+}
+
+.bt {
+  height: 35px;
+  width: 100px;
+  background: #b20a37;
+  cursor: pointer;
+}
+
+.progress__bar {
+  transform: scaleX(0);
 }/*# sourceMappingURL=main.css.map */
